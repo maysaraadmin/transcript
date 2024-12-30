@@ -1,0 +1,14 @@
+<h2>{{heading}}</h2>
+{{#courses}}
+<div class="transcript-container">
+    <ul class="course-list">
+        {{#.}}
+        <li class="course-item">{{fullname}}</li>
+        {{/.}}
+    </ul>
+    <a href="{{downloadurl}}" class="btn btn-primary">{{download}}</a>
+</div>
+{{/courses}}
+{{^courses}}
+<p class="alert alert-info">{{nocourses}}</p>
+{{/courses}}
